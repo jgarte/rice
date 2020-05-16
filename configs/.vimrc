@@ -22,7 +22,7 @@ Plugin 'sirtaj/vim-openscad'
 	" Appearance
 Plugin 'bling/vim-bufferline'
 Plugin 'junegunn/goyo.vim'
-Plugin 'arcticicestudio/nord-vim'
+Plugin 'depsterr/nord-vim'
 
 	" Functionallity
 Plugin 'tpope/vim-surround'
