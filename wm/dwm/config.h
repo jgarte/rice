@@ -71,9 +71,8 @@ static const char *termcmd[]  = { "st", "-e", "tmux", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	/* WM managment */
 	{ GLOBALMODKEY,                       XK_b,      togglebar,      {0} },
-	{ GLOBALMODKEY,                       XK_d,      spawn,          {.v = dmenucmd} },
-	{ GLOBALMODKEY,                       XK_Return, spawn,          {.v = termcmd} },
 	{ GLOBALMODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ GLOBALMODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ GLOBALMODKEY|ShiftMask,             XK_i,      incnmaster,     {.i = +1 } },
@@ -90,29 +89,42 @@ static Key keys[] = {
 	{ GLOBALMODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ GLOBALMODKEY,                       XK_o,      setlayout,      {.v = &layouts[3]} },
 	{ GLOBALMODKEY,                       XK_r,      setlayout,      {.v = &layouts[4]} },
-	{ GLOBALMODKEY|ControlMask,    		  XK_comma,  cyclelayout,    {.i = -1 } },
-	{ GLOBALMODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	{ GLOBALMODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ GLOBALMODKEY,                       XK_f,      togglefullscr,  {1} },
-	{ GLOBALMODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
 	{ GLOBALMODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ GLOBALMODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ GLOBALMODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ GLOBALMODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ GLOBALMODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ GLOBALMODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ GLOBALMODKEY,			              XK_F1,     focuswindow,    {.i = 0 } },
-	{ GLOBALMODKEY,			              XK_F2,     focuswindow,    {.i = 1 } },
-	{ GLOBALMODKEY,			              XK_F3,     focuswindow,    {.i = 2 } },
-	{ GLOBALMODKEY,			              XK_F4,     focuswindow,    {.i = 3 } },
-	{ GLOBALMODKEY,			              XK_F5,     focuswindow,    {.i = 4 } },
-	{ GLOBALMODKEY,			              XK_F6,     focuswindow,    {.i = 5 } },
-	{ GLOBALMODKEY,			              XK_F7,     focuswindow,    {.i = 6 } },
-	{ GLOBALMODKEY,			              XK_F8,     focuswindow,    {.i = 7 } },
-	{ GLOBALMODKEY,			              XK_F9,     focuswindow,    {.i = 8 } },
-	{ GLOBALMODKEY,			              XK_F10,    focuswindow,    {.i = 9 } },
-	{ GLOBALMODKEY,			              XK_F11,    focuswindow,    {.i = 10 } },
-	{ GLOBALMODKEY,			              XK_F12,    focuswindow,    {.i = 11 } },
+	{ GLOBALMODKEY|ShiftMask,             XK_e,      quit,           {0} },
+	{ GLOBALMODKEY|ShiftMask,             XK_r,      quit,           {1} }, 
+	/* Volume */
+	{ 0,                                  XF86XK_AudioLowerVolume,   spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +10%") },
+	{ 0,                                  XF86XK_AudioRaiseVolume,   spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -10%") },
+	{ GLOBALMODKEY,                       XK_minus,                  spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -10%") },
+	{ GLOBALMODKEY,			              XK_KP_Equal,                 spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +10%") },
+	/* Brightness */
+	{ 0,                                  XF86XK_MonBrightnessUp,    spawn, SHCMD("xbacklight -inc 1 -time 50") },
+	{ 0,                                  XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -dec 1 -time 50") },
+	{ ShiftMask,                          XF86XK_MonBrightnessUp,    spawn, SHCMD("xbacklight -inc 10 -time 50") },
+	{ ShiftMask,                          XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -dec 10 -time 50") },
+	{ GLOBALMODKEY|ShiftMask,             XF86XK_MonBrightnessUp,    spawn, SHCMD("xbacklight -set 100 -time 50") },
+	{ GLOBALMODKEY|ShiftMask,             XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -set 1 -time 50") },
+	/* Applications */
+	{ GLOBALMODKEY,                       XK_d,                      spawn, {.v = dmenucmd} },
+	{ GLOBALMODKEY,                       XK_Return,                 spawn, {.v = termcmd} },
+	{ GLOBALMODKEY,                       XK_p,                      spawn, SHCMD("st -e python2") },
+	{ GLOBALMODKEY,                       XK_c,                      spawn, SHCMD("st -e cmus") },
+	{ GLOBALMODKEY|ShiftMask,             XK_c,                      spawn, SHCMD("st -e cordless") },
+	{ GLOBALMODKEY,                       XK_BackSpace,              spawn, SHCMD("st -e cmus") },
+	{ GLOBALMODKEY,                       XK_s,                      spawn, SHCMD("setbg") },
+	{ GLOBALMODKEY|ShiftMask,             XK_s,                      spawn, SHCMD("steam") },
+	{ GLOBALMODKEY|ShiftMask,             XK_v,                      spawn, SHCMD("discord") },
+	{ GLOBALMODKEY,                       XK_v,                      spawn, SHCMD("st -e vim ~") },
+	{ GLOBALMODKEY,                       XK_g,                      spawn, SHCMD("lutris") },
+	{ GLOBALMODKEY,                       XK_Print,                  spawn, SHCMD("screenshot") },
+	/* Tags */
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -122,8 +134,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ GLOBALMODKEY|ShiftMask,             XK_e,      quit,           {0} },
-	{ GLOBALMODKEY|ShiftMask,             XK_r,      quit,           {1} }, 
 };
 
 /* button definitions */

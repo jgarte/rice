@@ -5,6 +5,8 @@ linux rice
 
 To install dwm, st, and the dotfiles for most programs run installer.sh
 
+To learn about ricing that isn't done by this script look at [other.md](https://github.com/depsterr/rice/tree/master/other.md).
+
 ## Colorscheme
 
 [Nord](https://www.nordtheme.com/)

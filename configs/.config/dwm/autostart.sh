@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# simple x hotkey daemon
-sxhkd &
-
 # xclip
 xclip &
 
