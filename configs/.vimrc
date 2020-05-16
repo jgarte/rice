@@ -22,6 +22,7 @@ Plugin 'sirtaj/vim-openscad'
 	" Appearance
 Plugin 'bling/vim-bufferline'
 Plugin 'junegunn/goyo.vim'
+Plugin 'arcticicestudio/nord-vim'
 
 	" Functionallity
 Plugin 'tpope/vim-surround'
@@ -55,7 +56,7 @@ set laststatus=2
 set ts=4 sw=4
 
 " colorscheme
-colorscheme dcolor
+colorscheme nord
 
 " tabcomplete
 set wildmode=longest,list,full
