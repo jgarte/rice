@@ -1,23 +1,22 @@
-#! /bin/sh
+#!/bin/bash
+cd $(dirname $0)
+SRCDIR=`pwd`
 
-SCRDIR=`dirname $0`
-cd $SRCDIR
-
-echo "Installing dwm"
-cd "wm/dwm"
+echo "===> Installing dwm"
+cd ./wm/dwm
 sudo make install
 cd $SRCDIR
 
-echo "Installing st"
-cd "terminal/st"
+echo "===> Installing st"
+cd terminal/st
 sudo make install
 cd $SRCDIR
 
-echo "Installing configuration files"
-cp "configs/.*" "~"
+echo "===> Installing configuration files"
+cp configs/. ~ -Ra
 
-echo "Installing etc files"
-sudo cp "etc/*" "/etc"
+echo "===> Installing etc files"
+sudo cp etc /etc -Ra
 
-echo "Installing scripts"
-cp "scripts" "~/.scripts"
+echo "===> Installing scripts"
+cp scripts ~/.scripts -r
