@@ -123,7 +123,7 @@ static Key keys[] = {
 	{ GLOBALMODKEY|ShiftMask,             XK_v,                      spawn, SHCMD("discord") },
 	{ GLOBALMODKEY,                       XK_v,                      spawn, SHCMD("st -e vim ~") },
 	{ GLOBALMODKEY,                       XK_g,                      spawn, SHCMD("lutris") },
-	{ GLOBALMODKEY,                       XK_Print,                  spawn, SHCMD("screenshot") },
+	{ GLOBALMODKEY,                       XK_Print,                  spawn, SHCMD("screengrab") },
 	/* Tags */
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
