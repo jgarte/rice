@@ -7,6 +7,8 @@ linux rice
 
 [![](resources/spotify.jpg?raw=true)](resources/spotify.png?raw=true)
 
+[![](resources/fibonacci.jpg?raw=true)](resources/fibonacci.png?raw=true)
+
 ## Installer
 
 To install dwm, st, and the dotfiles for most programs run installer.sh
