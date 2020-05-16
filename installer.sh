@@ -15,8 +15,5 @@ cd $SRCDIR
 echo "===> Installing configuration files"
 cp configs/. ~ -Ra
 
-echo "===> Installing etc files"
-sudo cp etc /etc -Ra
-
 echo "===> Installing scripts"
 cp scripts ~/.scripts -r

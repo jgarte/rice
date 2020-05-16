@@ -1,7 +1,7 @@
 # rice
 linux rice
 
-![](resources/tmux.png?raw=true)
+[![](resources/tmux.jpg?raw=true)](resources/tmux.png?raw=true)
 
 ## Installer
 
