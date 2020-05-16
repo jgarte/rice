@@ -1,37 +1,25 @@
 # dwm
 
-## features
+A moderately heavily modified build of dwm with the nord colorscheme.
 
-### patches
+## changes
 
-* actualfullscreen (modified)
+Fullsceen in application and on screen is seperate. This means that you can fullscreen, for example, a youtube video without it taking up the entire screen. If you then wish for the window to go fullscreen you can do `super + f` to fullscreen any window.
 
-* autoresize
+Dwm will now execute a script located at '~/.config/dwm/autostart.sh' on startup. This can be used for launching programs such as sxhkd, picom or a status bar updater.
 
-* autorestart
+I've also added gaps to every layout, except for monocle.
 
-* autorun (modified to be able to launch X dependant applications, such as sxhkd and custom script location)
+There are also some patches that I've applied:
 
-* awsomebar
+autoresize - solves windows sometimes not resizing
 
-* centeredmaster (modified added gaps)
+autorestart - you can now restart dwm by pressing `shift + super + r`, this is usefull for when changing settings
 
-* cyclelayouts
+awsomebar - the names of the monitors windows are now visible at the top
 
-* gaps (extended to all layouts)
+centeredmaster - adds a centered master layout
 
-### unique features
+cyclelayouts - lets you cycle between layouts with a keybind
 
-* gaps on ALL layouts (gaps patch only works for the tile layout) and working outer gaps for all layouts
-
-* centered master floating has floating middle window even with just one window open
-
-* hides bar on fullscreen (tag based, if you open another stack and have a fullscreen window open it is back)
-
-* disables windows entering fullscreen by themselfs (use super + f)
-
-* floating layout removed (it's just in the way when scrolling)
-
-* focus windows with alt + number as well as latest window with alt + tab
-
-* selected monitor has (sel) in the status bar
+fibonnaci - adds layouts based on the golden ratio
