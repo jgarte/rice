@@ -1,7 +1,7 @@
 # rice
 linux rice
 
-![](https://github.com/depsterr/rice/tree/master/resources/tmux.png)
+![](https://github.com/depsterr/rice/raw/master/resources/tmux.png)
 
 ## Installer
 
