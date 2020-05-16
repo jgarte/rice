@@ -1,6 +1,8 @@
 # rice
 linux rice
 
+![](https://github.com/depsterr/rice/tree/master/resources/tmux.png)
+
 ## Installer
 
 To install dwm, st, and the dotfiles for most programs run installer.sh
