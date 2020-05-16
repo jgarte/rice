@@ -1,0 +1,91 @@
+#
+# Volume
+#
+
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +10%
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -10%
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+XF86AudioMicMute
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+super + equal
+	pactl set-sink-volume @DEFAULT_SINK@ +10%
+
+super + minus
+	pactl set-sink-volume @DEFAULT_SINK@ -10%
+
+#
+# Brightness
+#
+
+XF86MonBrightnessUp
+	xbacklight -inc 1 -time 50
+XF86MonBrightnessDown
+	xbacklight -dec 1 -time 50
+
+shift + XF86MonBrightnessUp
+	xbacklight -inc 10 -time 50
+shift + XF86MonBrightnessDown
+	xbacklight -dec 10 -time 50
+
+
+super + XF86MonBrightnessUp
+	xbacklight -set 100 -time 50
+super + XF86MonBrightnessDown
+	xbacklight -set 1 -time 50
+
+#
+# Applications
+#
+
+# start a terminal
+super + Return 
+	st -e tmux
+
+# start python shell
+super + p
+	st -e python2
+
+# start cmus
+super + c
+	st -e cmus
+
+# start cordless
+super + shift + c
+	st -e cordless
+
+# start brave
+super + BackSpace
+	brave
+
+# start dmenu
+super + d
+	dmenu_run
+
+# set wallpaper  
+super + s
+	setbg
+
+# start steam
+super + shift + s
+	steam
+
+# start discord
+super + shift + v
+	discord
+
+# start vim
+super + v
+	st -e vim ~
+
+# start lutis
+super + g
+	lutris
+
+# screenshot script
+Print
+	screenshot
