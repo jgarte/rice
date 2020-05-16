@@ -3,6 +3,8 @@ linux rice
 
 [![](resources/tmux.jpg?raw=true)](resources/tmux.png?raw=true)
 
+[![](resources/windows.jpg?raw=true)](resources/windows.png?raw=true)
+
 ## Installer
 
 To install dwm, st, and the dotfiles for most programs run installer.sh
