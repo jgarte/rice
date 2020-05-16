@@ -1,3 +1,0 @@
-#!/bin/sh
-[ -f "/proc/sys/abi/vsyscall32" ] || exit
-[ "$(whoami)" = "root" ] && echo 0 > /proc/sys/abi/vsyscall32 || $([ -z "$1" ] && sudo sh $0 "sudo")

@@ -18,3 +18,6 @@ cp "configs/.*" "~"
 
 echo "Installing etc files"
 sudo cp "etc/*" "/etc"
+
+echo "Installing scripts"
+cp "scripts" "~/.scripts"

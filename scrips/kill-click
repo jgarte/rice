@@ -1,2 +1,0 @@
-#/bin/sh
-xprop | awk '/PID/ { print $3 }' | xargs kill -KILL

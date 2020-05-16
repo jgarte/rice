@@ -1,5 +1,0 @@
-mkdir $1
-mkdir $1/IMG
-mkdir $1/CSS
-touch $1/CSS/stylesheet.css
-cp ~/.scripts/create-site-template $1/index.html

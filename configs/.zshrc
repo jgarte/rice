@@ -16,22 +16,22 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=vim
 
 if [ "$TERM" = "linux" ]; then
-    echo -en "\e]PFFFFFFF" #white
-    echo -en "\e]P82B2B2B" #darkgrey
-    echo -en "\e]P1D75F5F" #darkred
-    echo -en "\e]P9E33636" #red
-    echo -en "\e]P287AF5F" #darkgreen
-    echo -en "\e]PA98E34D" #green
-    echo -en "\e]P3D7AF87" #brown
-    echo -en "\e]PBFFD75F" #yellow
-    echo -en "\e]P48787AF" #darkblue
-    echo -en "\e]PC7373C9" #blue
-    echo -en "\e]P5BD53A5" #darkmagenta
-    echo -en "\e]PDD633B2" #magenta
-    echo -en "\e]P65FAFAF" #darkcyan
-    echo -en "\e]PE44C9C9" #cyan
-    echo -en "\e]P7E5E5E5" #lightgrey
-    echo -en "\e]P0232323" #black
+	echo -en "\e]P0#3b4252" # black
+	echo -en "\e]P1#bf616a" # red
+	echo -en "\e]P2#a3be8c" # green
+	echo -en "\e]P3#ebcb8b" # yellow
+	echo -en "\e]P4#81a1c1" # blue
+	echo -en "\e]P5#b48ead" # magenta
+	echo -en "\e]P6#88c0d0" # cyan
+	echo -en "\e]P7#e5e9f0" # white
+	echo -en "\e]P8#4c566a" # black
+	echo -en "\e]P9#bf616a" # red
+	echo -en "\e]PA#a3be8c" # green
+	echo -en "\e]PB#ebcb8b" # yellow
+	echo -en "\e]PC#81a1c1" # blue
+	echo -en "\e]PD#b48ead" # magenta
+	echo -en "\e]PE#8fbcbb" # cyan
+	echo -en "\e]PF#eceff4" # white
     clear #for background artifacting
 fi
 
