@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Source Code Pro:style=Regular:pixelsize=14";
+static char *font = "Source Code Pro:style=Regular:pixelsize=13";
 
 static int borderpx = 2;
 
