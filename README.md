@@ -15,6 +15,10 @@ For a list of all dependencies, look at [deps.md](deps.md)
 
 To learn about ricing that isn't done by this script look at [other.md](other.md).
 
+## Keybinds
+
+Checkout [keybinds.md](keybinds.md) for all the keybinds.
+
 ## Colorscheme
 
 [Nord](https://www.nordtheme.com/)
