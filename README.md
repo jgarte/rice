@@ -7,6 +7,8 @@ Linux rice
 
 [![](resources/fibonacci.jpg?raw=true)](resources/fibonacci.png?raw=true)
 
+[![](resources/homepage.jpg?raw=true)](resources/homepage.png?raw=true)
+
 ## Installer
 
 To install dwm, st, and the dotfiles for most programs run installer.sh
