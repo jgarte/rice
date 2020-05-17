@@ -1,5 +1,5 @@
 # rice
-Linux rice
+Linux rice - laptop branch (slightly different sizes since my laptop has lower res)
 
 [![](resources/tmux.jpg?raw=true)](resources/tmux.png?raw=true)
 
