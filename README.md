@@ -1,5 +1,5 @@
 # rice
-linux rice
+Linux rice
 
 [![](resources/tmux.jpg?raw=true)](resources/tmux.png?raw=true)
 
@@ -27,7 +27,7 @@ Checkout [keybinds.md](keybinds.md) for all the keybinds.
 
 My modified version is in the [terminal folder](terminal/st).
 
-You can download the soruce [here](http://st.suckless.org/).
+You can download the source [here](http://st.suckless.org/).
 
 ## Window Manager
 
