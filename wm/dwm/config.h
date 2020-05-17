@@ -109,8 +109,8 @@ static Key keys[] = {
 	{ 0,                                  XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -dec 1 -time 50") },
 	{ ShiftMask,                          XF86XK_MonBrightnessUp,    spawn, SHCMD("xbacklight -inc 10 -time 50") },
 	{ ShiftMask,                          XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -dec 10 -time 50") },
-	{ GLOBALMODKEY|ShiftMask,             XF86XK_MonBrightnessUp,    spawn, SHCMD("xbacklight -set 100 -time 50") },
-	{ GLOBALMODKEY|ShiftMask,             XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -set 1 -time 50") },
+	{ GLOBALMODKEY,                       XF86XK_MonBrightnessUp,    spawn, SHCMD("xbacklight -set 100 -time 50") },
+	{ GLOBALMODKEY,                       XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -set 1 -time 50") },
 	/* Applications */
 	{ GLOBALMODKEY,                       XK_d,                      spawn, {.v = dmenucmd} },
 	{ GLOBALMODKEY,                       XK_Return,                 spawn, {.v = termcmd} },
