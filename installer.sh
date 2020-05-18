@@ -13,7 +13,7 @@ sudo make install
 cd $SRCDIR
 
 echo "===> Installing configuration files"
-cp configs/. ~ -Ra
+cp configs/. ~ -Raf
 
 echo "===> Installing scripts"
-cp scripts ~/.scripts -r
+cp scripts ~/.scripts -Raf
