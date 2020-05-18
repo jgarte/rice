@@ -15,7 +15,7 @@ while true; do
 
 	ADDRSTR="📶"
 	ADDRS=`ip addr |\
-	   	awk '/inet / { gsub("/"," "); print $2; }'`
+	   	awk '!/127.0.0.1/&&/inet / { gsub("/"," "); print $2; }'`
 	[ -z "${ADDRS}" ] && ADDRS="No Internet"
 	for ADDR in $ADDRS; do
 		ADDRSTR+=" ${ADDR}"
@@ -24,6 +24,9 @@ while true; do
 	FREESTR="💾 `free -h | awk '/Mem:/ { print $3 }'` / `free -h | awk '/Mem:/ { print $2 }'`"
 
 	DISKSTR="📁 `df -H | awk '/ \/$/ { print $3 }'` / `df -H | awk '/ \/$/ { print $2 }'`"
+	[ -z "`df -H | grep '\/home$'`" ] || {
+		DISKSTR+=" 🏠 `df -H | awk '/ \/home$/ { print $3 }'` / `df -H | awk '/ \/home$/ { print $2 }'`"
+	}
 
 	# BATSTR is ugly to make it work if no battery is connected
 	xsetroot -name "${BATSTR}${DATESTR}; ${ADDRSTR} | ${FREESTR} | ${DISKSTR}"
