@@ -2,7 +2,7 @@
 
 # Kill all previous status scripts
 for pid in `ps aux |  awk '!/grep/&&/status.sh/&&/bash/ { print $2 }'`; do
-	[ "$pid" = "$$" ] || kill $pid
+	[ "$pid" = "$$" ] || kill $pid &>/dev/null
 done
 
 # Output before ; is to the right, after is to the left
@@ -29,12 +29,14 @@ while true; do
 
 	FREESTR="💾 `free -h | awk '/Mem:/ { print $3 }'` / `free -h | awk '/Mem:/ { print $2 }'`"
 
+	CPUSTR="🌀 `grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END { printf("%.0f", usage) }'`%"
+
 	DISKSTR="📁 `df -H | awk '/ \/$/ { print $3 }'` / `df -H | awk '/ \/$/ { print $2 }'`"
 	[ -z "${HASHOME}" ] || {
-		DISKSTR+=" 🏠 `df -H | awk '/ \/home$/ { print $3 }'` / `df -H | awk '/ \/home$/ { print $2 }'`"
+		DISKSTR+=" | 🏠 `df -H | awk '/ \/home$/ { print $3 }'` / `df -H | awk '/ \/home$/ { print $2 }'`"
 	}
 
 	# BATSTR is ugly to make it work if no battery is connected
-	xsetroot -name " ${BATSTR}${DATESTR}; ${ADDRSTR} | ${FREESTR} | ${DISKSTR}"
+	xsetroot -name " ${BATSTR}${DATESTR}; ${ADDRSTR} | ${FREESTR} | ${CPUSTR} | ${DISKSTR}"
 	sleep 5
 done
