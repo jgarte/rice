@@ -2,6 +2,9 @@
 
 # Output before ; is to the right, after is to the left
 
+# Comment out this line to remove spotify cli
+SPOTIFYCMD="Now playing: `spotifycli --playbackstatus 2>/dev/null` `spotifycli --status 2>/dev/null || echo 'Nothing'`"
+
 BATDIR=`find /sys/class/power_supply -name 'BAT*' | sed '1q'`
 
 [ -z "`df -H | grep '\/home$'`" ] || HASHOME=true
@@ -16,8 +19,7 @@ while true; do
 
 	ADDRSTR="📶"
 	ADDRS=`ip addr |\
-	   	awk '!/127.0.0.1/&&/inet / { gsub("/"," "); print $2; }'`
-	[ -z "${ADDRS}" ] && ADDRS="No Internet"
+	   	awk '!/127.0.0.1/&&/inet / { gsub("/"," "); print $2; }'` [ -z "${ADDRS}" ] && ADDRS="No Internet"
 	for ADDR in $ADDRS; do
 		ADDRSTR+=" ${ADDR}"
 	done
@@ -29,7 +31,7 @@ while true; do
 		DISKSTR+=" 🏠 `df -H | awk '/ \/home$/ { print $3 }'` / `df -H | awk '/ \/home$/ { print $2 }'`"
 	}
 
-	SPOTIFYSTR="Now playing: `spotifycli --playbackstatus 2>/dev/null` `spotifycli --status 2>/dev/null || echo 'Nothing'`"
+	SPOTIFYSTR=${SPOTIFYCMD}
 
 	sleep 0.5
 	# BATSTR is ugly to make it work if no battery is connected
