@@ -11,7 +11,7 @@ while true; do
 
 	BATSTR=""
 	[ -z "${BATDIR}" ] || {
-		BATSTR="| 🔋 `< ${BATDIR}/capacity`% `< ${BATDIR}/status` | "
+		BATSTR="🔋 `< ${BATDIR}/capacity`% `< ${BATDIR}/status` | "
 	} 
 
 	ADDRSTR="📶"
@@ -30,6 +30,6 @@ while true; do
 	}
 
 	# BATSTR is ugly to make it work if no battery is connected
-	xsetroot -name "${BATSTR}${DATESTR}; ${ADDRSTR} | ${FREESTR} | ${DISKSTR}"
+	xsetroot -name " ${BATSTR}${DATESTR}; ${ADDRSTR} | ${FREESTR} | ${DISKSTR}"
 	sleep 5
 done
