@@ -6,6 +6,7 @@ static const unsigned int gappx        = 8;        /* gap pixel between windows 
 static const unsigned int snap         = 8;       /* snap pixel */
 static const int showbar               = 1;        /* 0 means no bar */
 static const int topbar                = 1;        /* 0 means bottom bar */
+static const char barsep               = ';';       /* seperates left and right bar text */
 static const char *fonts[]             = { "Source Code Pro:style=Regular:size=10" };
 static const char dmenufont[]          = "Source Code Pro:style=Regular:size=10";
 static const char col_gray1[]          = "#2e3440";
