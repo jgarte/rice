@@ -1,10 +1,5 @@
 #! /bin/bash
 
-# Kill all previous status scripts
-for pid in `ps aux |  awk '!/grep/&&/status.sh/&&/bash/ { print $2 }'`; do
-	[ "$pid" = "$$" ] || kill $pid &>/dev/null
-done
-
 # Output before ; is to the right, after is to the left
 
 BATDIR=`find /sys/class/power_supply -name 'BAT*' | sed '1q'`
