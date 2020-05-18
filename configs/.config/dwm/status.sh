@@ -29,6 +29,6 @@ while true; do
 	}
 
 	# BATSTR is ugly to make it work if no battery is connected
-	xsetroot -name "${BATSTR}${DATESTR}; ${ADDRSTR} | ${FREESTR} | ${DISKSTR} | ${SPOTIFYSTR}"
+	xsetroot -name "${BATSTR}${DATESTR}; ${ADDRSTR} | ${FREESTR} | ${DISKSTR}"
 	sleep 5
 done
