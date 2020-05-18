@@ -14,4 +14,4 @@ I also use [glasscord](https://github.com/AryToNeX/Glasscord) to rice my discord
 
 ## Spotify Theme
 
-I use [the Nord theme](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Nord) for [spicetify](https://github.com/khanhas/spicetify-cli)
+I use [ my own Nord theme](https://github.com/depsterr/spicetify-nord) for [spicetify](https://github.com/khanhas/spicetify-cli)
