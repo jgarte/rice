@@ -16,7 +16,8 @@ while true; do
 
 	ADDRSTR="📶"
 	ADDRS=`ip addr |\
-	   	awk '!/127.0.0.1/&&/inet / { gsub("/"," "); print $2; }'` [ -z "${ADDRS}" ] && ADDRS="No Internet"
+	   	awk '!/127.0.0.1/&&/inet / { gsub("/"," "); print $2; }'`
+	[ -z "${ADDRS}" ] && ADDRS="No Internet"
 	for ADDR in $ADDRS; do
 		ADDRSTR+=" ${ADDR}"
 	done
