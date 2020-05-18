@@ -21,7 +21,7 @@ static const char *colors[][3]      = {
 };
 
 /* uncomment for status on all monitors */
-#define MULTIPLEMON
+/* #define MULTIPLEMON */
 
 /* autostart */
 static const char autostartfilepath[] = "~/.config/dwm/autostart.sh";
