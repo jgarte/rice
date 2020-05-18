@@ -27,11 +27,15 @@ Checkout [keybinds.md](keybinds.md) for all the keybinds.
 
 ## Terminal
 
+st
+
 My modified version is in the [terminal folder](terminal/st).
 
 You can download the source [here](http://st.suckless.org/).
 
 ## Window Manager
+
+dwm
 
 My modified version is in the [wm folder](wm/dwm).
 
