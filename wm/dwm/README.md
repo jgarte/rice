@@ -23,3 +23,7 @@ centeredmaster - adds a centered master layout
 cyclelayouts - lets you cycle between layouts with a keybind
 
 fibonnaci - adds layouts based on the golden ratio
+
+## TODO
+
+Change binds to use new method of starting applications by creating strings for each, such as term and dmnu.

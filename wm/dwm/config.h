@@ -6,6 +6,7 @@ static const unsigned int gappx        = 8;        /* gap pixel between windows 
 static const unsigned int snap         = 8;       /* snap pixel */
 static const int showbar               = 1;        /* 0 means no bar */
 static const int topbar                = 1;        /* 0 means bottom bar */
+static const char barsep               = ';';       /* seperates left and right bar text */
 static const char *fonts[]             = { "Source Code Pro:style=Regular:size=8" };
 static const char dmenufont[]          = "Source Code Pro:style=Regular:size=8";
 static const char col_gray1[]          = "#2e3440";
@@ -117,7 +118,7 @@ static Key keys[] = {
 	{ GLOBALMODKEY,                       XK_p,                      spawn, SHCMD("st -e python2") },
 	{ GLOBALMODKEY,                       XK_c,                      spawn, SHCMD("st -e cmus") },
 	{ GLOBALMODKEY|ShiftMask,             XK_c,                      spawn, SHCMD("st -e cordless") },
-	{ GLOBALMODKEY,                       XK_BackSpace,              spawn, SHCMD("brave") },
+	{ GLOBALMODKEY,                       XK_BackSpace,              spawn, SHCMD("chromium") },
 	{ GLOBALMODKEY,                       XK_s,                      spawn, SHCMD("setbg") },
 	{ GLOBALMODKEY|ShiftMask,             XK_s,                      spawn, SHCMD("steam") },
 	{ GLOBALMODKEY|ShiftMask,             XK_v,                      spawn, SHCMD("discord") },
