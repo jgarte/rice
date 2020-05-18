@@ -764,19 +764,19 @@ drawbar(Monitor *m)
 	int srsw = TEXTW(srtext) - lrpad + 2;
 	if (m == selmon) { /* status is only drawn on selected monitor */
 		drw_setscheme(drw, scheme[SchemeNorm]);
-		drw_text(drw, 0, 0, mons->ww, bh, 0, ltext, 0);
-		drw_text(drw, mons->ww - srsw, 0, mons->ww, bh, 0, srtext, 0);
+		drw_text(drw, 0, 0, m->ww, bh, 0, ltext, 0);
+		drw_text(drw, m->ww - srsw, 0, m->ww, bh, 0, srtext, 0);
 		drw_map(drw, m->extrabarwin, 0, 0, m->ww, bh);
 	} else {
 		drw_setscheme(drw, scheme[SchemeNorm]);
-		drw_text(drw, 0, 0, mons->ww, bh, 0, ltext, 0);
-		drw_text(drw, mons->ww - rsw, 0, mons->ww, bh, 0, rtext, 0);
+		drw_text(drw, 0, 0, m->ww, bh, 0, ltext, 0);
+		drw_text(drw, m->ww - rsw, 0, m->ww, bh, 0, rtext, 0);
 		drw_map(drw, m->extrabarwin, 0, 0, m->ww, bh);
 	}
 #else
 	drw_setscheme(drw, scheme[SchemeNorm]);
-	drw_text(drw, 0, 0, mons->ww, bh, 0, ltext, 0);
-	drw_text(drw, mons->ww - rsw, 0, mons->ww, bh, 0, rtext, 0);
+	drw_text(drw, 0, 0, m->ww, bh, 0, ltext, 0);
+	drw_text(drw, m->ww - rsw, 0, m->ww, bh, 0, rtext, 0);
 	drw_map(drw, m->extrabarwin, 0, 0, m->ww, bh);
 #endif
 
@@ -2263,11 +2263,7 @@ updatestatus(void)
 			}
 		}
 	}
-#ifdef MULTIPLEMONS
 	drawbars();
-#else
-	drawbar(selmon);
-#endif
 }
 
 void
