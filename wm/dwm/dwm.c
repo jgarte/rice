@@ -1912,6 +1912,7 @@ hidebarfunc(Monitor *m)
 	m->showbar = 0;
 	updatebarpos(m);
 	XMoveResizeWindow(dpy, m->barwin, m->wx, m->by, m->ww, bh);
+	XMoveResizeWindow(dpy, m->extrabarwin, m->wx, m->eby, m->ww, bh);
 	arrange(m);
 }
 
@@ -1921,6 +1922,7 @@ showbarfunc(Monitor *m)
 	m->showbar = 1;
 	updatebarpos(m);
 	XMoveResizeWindow(dpy, m->barwin, m->wx, m->by, m->ww, bh);
+	XMoveResizeWindow(dpy, m->extrabarwin, m->wx, m->eby, m->ww, bh);
 	arrange(m);
 }
 
