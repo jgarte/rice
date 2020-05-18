@@ -118,7 +118,7 @@ static Key keys[] = {
 	{ GLOBALMODKEY,                       XK_p,                      spawn, SHCMD("st -e python2") },
 	{ GLOBALMODKEY,                       XK_c,                      spawn, SHCMD("st -e cmus") },
 	{ GLOBALMODKEY|ShiftMask,             XK_c,                      spawn, SHCMD("st -e cordless") },
-	{ GLOBALMODKEY,                       XK_BackSpace,              spawn, SHCMD("chromium") },
+	{ GLOBALMODKEY,                       XK_BackSpace,              spawn, SHCMD("brave") },
 	{ GLOBALMODKEY,                       XK_s,                      spawn, SHCMD("setbg") },
 	{ GLOBALMODKEY|ShiftMask,             XK_s,                      spawn, SHCMD("steam") },
 	{ GLOBALMODKEY|ShiftMask,             XK_v,                      spawn, SHCMD("discord") },
