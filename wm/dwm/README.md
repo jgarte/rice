@@ -8,6 +8,8 @@ Fullsceen in application and on screen is seperate. This means that you can full
 
 Dwm will now execute a script located at '~/.config/dwm/autostart.sh' on startup. This can be used for launching programs such as sxhkd, picom or a status bar updater.
 
+I also have a modified version of the extrabar patch. Instead of having one statusbar at the top and one at the bottom I have one at the bottom and can then set stuff to be to the left and right on it. The syntax for this is `xsetroot -name 'will be shown on the right side;will be shown on the left side'`.
+
 I've also added gaps to every layout, except for monocle.
 
 There are also some patches that I've applied:
