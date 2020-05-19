@@ -22,11 +22,9 @@ while true; do
 		ADDRSTR+=" ${ADDR}"
 	done
 
-	FREESTR="💾 `free -h | awk '/Mem:/ { gsub("Gi","G"); print $3 }'` / `free -h | awk '/Mem:/ { gsub("Gi","G"); print $2 }'`"
+	FREESTR="💾 `free -h | awk '/Mem:/ { gsub("Gi","G"); print $3 }'` / `free -h | awk '/Mem:/ { gsub("Mi","M");gsub("Gi","G"); print $2 }'`"
 
-	CPUSTR="🌀 `grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END { printf("%.0f", usage) }'`%"
-
-	DISKSTR="📁 `df -H | awk '/ \/$/ { print $3 }'` / `df -H | awk '/ \/$/ { print $2 }'`"
+	CPUSTR="🌀 `grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END { printf("%.0f", usage) }'`%" DISKSTR="📁 `df -H | awk '/ \/$/ { print $3 }'` / `df -H | awk '/ \/$/ { print $2 }'`"
 	[ -z "${HASHOME}" ] || {
 		DISKSTR+=" | 🏠 `df -H | awk '/ \/home$/ { print $3 }'` / `df -H | awk '/ \/home$/ { print $2 }'`"
 	}
