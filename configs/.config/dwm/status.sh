@@ -7,12 +7,14 @@ BATDIR=`find /sys/class/power_supply -name 'BAT*' | sed '1q'`
 [ -z "`df -H | grep '\/home$'`" ] || HASHOME=true
 
 while true; do
-	DATESTR="📅 `date +%a\ %d\ %b\ %R:%S`"
-
 	BATSTR=""
 	[ -z "${BATDIR}" ] || {
 		BATSTR="🔋 `< ${BATDIR}/capacity`% `< ${BATDIR}/status` | "
 	} 
+
+	VOLSTR="🔉 `pulsemixer --get-volume | cut -d ' ' -f 1`%"
+
+	DATESTR="📅 `date +%a\ %d\ %b\ %R:%S`"
 
 	ADDRSTR="📶"
 	ADDRS=`ip addr |\
@@ -30,6 +32,6 @@ while true; do
 	}
 
 	# BATSTR is ugly to make it work if no battery is connected
-	xsetroot -name " ${BATSTR}${DATESTR}; ${ADDRSTR} | ${FREESTR} | ${CPUSTR} | ${DISKSTR}"
+	xsetroot -name " ${BATSTR}${VOLSTR} | ${DATESTR}; ${ADDRSTR} | ${FREESTR} | ${CPUSTR} | ${DISKSTR}"
 	sleep 5
 done
