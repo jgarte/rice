@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 [ -z "$(echo -e)" ] && ECHO=("echo" "-e") || ECHO=("echo")
 while :
 do
