@@ -48,3 +48,13 @@ Tmux
 ## Compositor
 
 Picom
+
+## TODO
+
+These are mostly personal notes for what I want to do with my system in the future.
+
+* Clean up status bar to be a proper daemon and not just a script.
+
+* Move to surf/tabbed for browsing
+
+* Move install to gentoo or void
