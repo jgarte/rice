@@ -9,6 +9,9 @@ xclip &
 # picom
 picom &
 
+# redshift
+redshift &
+
 # wallpaper
 ~/.fehbg &
 
