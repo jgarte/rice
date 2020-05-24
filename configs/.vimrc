@@ -55,6 +55,9 @@ set laststatus=2
 " tab size
 set ts=4 sw=4
 
+" use system clipboard
+set clipboard=unnamedplus
+
 " colorscheme
 colorscheme nord
 
