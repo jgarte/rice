@@ -116,13 +116,10 @@ static Key keys[] = {
 	{ GLOBALMODKEY,                       XK_d,                      spawn, {.v = dmenucmd} },
 	{ GLOBALMODKEY,                       XK_Return,                 spawn, {.v = termcmd} },
 	{ GLOBALMODKEY,                       XK_p,                      spawn, SHCMD("st -e python2") },
-	{ GLOBALMODKEY,                       XK_c,                      spawn, SHCMD("st -e cmus") },
-	{ GLOBALMODKEY|ShiftMask,             XK_c,                      spawn, SHCMD("st -e cordless") },
 	{ GLOBALMODKEY,                       XK_BackSpace,              spawn, SHCMD("chromium") },
 	{ GLOBALMODKEY,                       XK_s,                      spawn, SHCMD("setbg") },
 	{ GLOBALMODKEY|ShiftMask,             XK_s,                      spawn, SHCMD("steam") },
 	{ GLOBALMODKEY|ShiftMask,             XK_v,                      spawn, SHCMD("discord") },
-	{ GLOBALMODKEY,                       XK_v,                      spawn, SHCMD("st -e vim ~") },
 	{ GLOBALMODKEY,                       XK_g,                      spawn, SHCMD("lutris") },
 	{ 0,                                  XK_Print,                  spawn, SHCMD("scrot -u ~/img/screenshots/%Y-%m-%d-%T-screenshot.png") },
 	/* Tags */
