@@ -76,23 +76,17 @@ st `Super + Return`
 
 python2 terminal `Super + p`
 
-cmus terminal `Super + c`
-
-cordless terminal `Super + Shift + C`
-
 ungoogled chromium `Super + BackSpace`
 
 setbg script `Super + s`
 
 steam `Super + Shift + S`
 
-vim `Super + v`
-
 discord `Super + Shift + V`
 
 lutris `Super + g`
 
-screengrab `Print`
+scrot `Print`
 
 ### tags
 
