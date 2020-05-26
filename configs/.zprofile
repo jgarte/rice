@@ -1,4 +1,4 @@
-export PATH=$PATH:/sbin/:/snap/bin/:~/.scripts/:~/.gem/ruby/2.6.0/gems:/opt/
+export PATH=$PATH:~/.scripts/:~/.gem/ruby/*/gems:/opt/
 if [ "$(tty)" = "/dev/tty1" ]; then
 	startx
 fi
