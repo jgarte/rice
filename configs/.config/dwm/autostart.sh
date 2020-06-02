@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # status bar
-bash ~/.config/dwm/status.sh &
+[ -f "$HOME/.config/dwm/status.sh" ] && "$HOME"/.config/dwm/status.sh &
 
 # xclip
 xclip &
@@ -10,7 +10,4 @@ xclip &
 picom &
 
 # wallpaper
-~/.fehbg &
-
-# redshift
-redshift &
+"$HOME"/.fehbg &
