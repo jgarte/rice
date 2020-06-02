@@ -7,7 +7,7 @@ BATDIR=$( find /sys/class/power_supply -name 'BAT*' | sed '1q' )
 df -H | grep -q '\/home$' && HASHOME=true
 
 while true; do
-	[ -z "${BATDIR}" ] || BATSTR="🔋 $( < "${BATDIR}"/capacity )% $( < "${BATDIR}"/status ) | "
+	[ -z "${BATDIR}" ] || BATSTR="🔋 $( cat "${BATDIR}"/capacity )% $( cat "${BATDIR}"/status ) | "
 
 	VOL=$( pulsemixer --get-volume )
 	VOLSTR="🔉 ${VOL##* }%"
