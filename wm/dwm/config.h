@@ -122,6 +122,7 @@ static Key keys[] = {
 	{ GLOBALMODKEY|ShiftMask,             XK_v,                      spawn, SHCMD("discord") },
 	{ GLOBALMODKEY,                       XK_g,                      spawn, SHCMD("lutris") },
 	{ 0,                                  XK_Print,                  spawn, SHCMD("scrot -u ~/img/screenshots/%Y-%m-%d-%T-screenshot.png") },
+	{ GLOBALMODKEY,                                  XK_Print,                  spawn, SHCMD("scrot ~/img/screenshots/%Y-%m-%d-%T-screenshot.png") },
 	/* Tags */
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
