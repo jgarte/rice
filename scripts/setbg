@@ -1,2 +1,2 @@
 #!/bin/sh
-sxiv -tor ~/img/bg | xargs feh --bg-fill
+feh --bg-fill "$(sxiv -tor "$HOME"/img/bg)"
