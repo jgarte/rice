@@ -1,4 +1,4 @@
-#!/bin/sh
+#! /bin/dash
 
 # status bar
 [ -f "$HOME/.config/dwm/status.sh" ] && "$HOME"/.config/dwm/status.sh &
