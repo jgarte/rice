@@ -1508,14 +1508,8 @@ run(void)
 
 void
 autostart(void) {
-	char command[1024] = "bash ";
-	short n;
-	for (n  = 5; autostartfilepath[n - 5] != 0x0; n++)
-		command[n] = autostartfilepath[n - 5];
-	command[n++] = ' ';
-	command[n++] = '&';
-	command[n] = 0x0;
-
+	char command[64] = "/bin/sh ";
+	strcat(command, autostartfilepath);
 	system(command);
 }
 

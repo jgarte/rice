@@ -2,11 +2,6 @@
 cd "$(dirname $0)"
 SRCDIR=$PWD
 
-which dash || {
-	echo "You don't seem to have dash installed, my scripts wont work. Either install dash or rewrite the top row of each script to use your preffered shell and install manually."
-	exit
-}
-
 echo "===> Installing dwm"
 cd ./wm/dwm || {
 	echo "no wm folder?"

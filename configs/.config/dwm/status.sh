@@ -1,4 +1,4 @@
-#! /bin/dash
+#! /bin/sh
 
 # Output before ; is to the right, after is to the left
 

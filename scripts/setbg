@@ -1,2 +1,2 @@
-#! /bin/dash
+#! /bin/sh
 feh --bg-fill "$(sxiv -tor "$HOME"/img/bg)"
