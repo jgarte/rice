@@ -101,10 +101,10 @@ static Key keys[] = {
 	{ GLOBALMODKEY|ShiftMask,             XK_e,      quit,           {0} },
 	{ GLOBALMODKEY|ShiftMask,             XK_r,      quit,           {1} }, 
 	/* Volume */
-	{ 0,                                  XF86XK_AudioLowerVolume,   spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -10%") },
-	{ 0,                                  XF86XK_AudioRaiseVolume,   spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +10%") },
-	{ GLOBALMODKEY,                       XK_minus,                  spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -10%") },
-	{ GLOBALMODKEY,			              XK_KP_Equal,               spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +10%") },
+	{ 0,                                  XF86XK_AudioLowerVolume,   spawn, SHCMD("amixer -q sset Master 10-") },
+	{ 0,                                  XF86XK_AudioRaiseVolume,   spawn, SHCMD("amixer -q sset Master 10+") },
+	{ GLOBALMODKEY,                       XK_minus,                  spawn, SHCMD("amixer -q sset Master 10-") },
+	{ GLOBALMODKEY,			              XK_KP_Equal,               spawn, SHCMD("amixer -q sset Master 10+") },
 	/* Brightness */
 	{ 0,                                  XF86XK_MonBrightnessUp,    spawn, SHCMD("xbacklight -inc 1 -time 50") },
 	{ 0,                                  XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -dec 1 -time 50") },
