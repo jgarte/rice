@@ -116,7 +116,7 @@ static Key keys[] = {
 	{ GLOBALMODKEY,                       XK_d,                      spawn, {.v = dmenucmd} },
 	{ GLOBALMODKEY,                       XK_Return,                 spawn, {.v = termcmd} },
 	{ GLOBALMODKEY,                       XK_p,                      spawn, SHCMD("st -e python2") },
-	{ GLOBALMODKEY,                       XK_BackSpace,              spawn, SHCMD("chromium") },
+	{ GLOBALMODKEY,                       XK_BackSpace,              spawn, SHCMD("$BROWSER") },
 	{ GLOBALMODKEY,                       XK_s,                      spawn, SHCMD("setbg") },
 	{ GLOBALMODKEY|ShiftMask,             XK_s,                      spawn, SHCMD("steam") },
 	{ GLOBALMODKEY|ShiftMask,             XK_v,                      spawn, SHCMD("discord") },
