@@ -17,6 +17,12 @@ cd ./terminal/st || {
 	exit
 }
 
+echo "===> Installing dmenu"
+cd ./app-launcher/dmenu || {
+	echo "no app-launcher folder?"
+	exit
+}
+
 sudo make install
 cd "$SRCDIR"
 
