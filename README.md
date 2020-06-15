@@ -47,7 +47,7 @@ Tmux
 
 ## Compositor
 
-Picom
+NONE - friendship ended with compositors
 
 ## TODO
 

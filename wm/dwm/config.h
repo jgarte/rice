@@ -23,9 +23,6 @@ static const char *colors[][3]      = {
 /* uncomment for status on all monitors */
 #define MULTIPLEMON
 
-/* autostart */
-static const char autostartfilepath[] = "~/.config/dwm/autostart.sh";
-
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 

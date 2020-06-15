@@ -204,7 +204,6 @@ static void resizeclient(Client *c, int x, int y, int w, int h);
 static void resizemouse(const Arg *arg);
 static void restack(Monitor *m);
 static void run(void);
-static void autostart(void);
 static void scan(void);
 static int sendevent(Client *c, Atom proto);
 static void movemon(const Arg *arg);
@@ -1500,17 +1499,9 @@ run(void)
 	XEvent ev;
 	/* main event loop */
 	XSync(dpy, False);
-	autostart(); // autostart
 	while (running && !XNextEvent(dpy, &ev))
 		if (handler[ev.type])
 			handler[ev.type](&ev); /* call handler */
-}
-
-void
-autostart(void) {
-	char command[64] = "/bin/sh ";
-	strcat(command, autostartfilepath);
-	system(command);
 }
 
 void
