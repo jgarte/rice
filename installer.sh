@@ -22,6 +22,3 @@ cd "$SRCDIR"
 
 echo "===> Installing configuration files"
 cp configs/. ~ -Raf
-
-echo "===> Installing scripts"
-cp scripts ~/.scripts -Raf
