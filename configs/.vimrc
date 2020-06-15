@@ -27,7 +27,7 @@ Plugin 'depsterr/nord-vim'
 	" Functionallity
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
-Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'depsterr/vim-tmux-navigator'
 Plugin 'depsterr/hex.vim'
 
 call vundle#end()
