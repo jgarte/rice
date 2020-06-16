@@ -9,7 +9,7 @@ df -h | grep -q '\/home$' && HASHOME=true
 while true; do
 	[ -z "${BATDIR}" ] || BATSTR="🔋 $( cat "${BATDIR}"/capacity )% $( cat "${BATDIR}"/status ) | "
 
-	VOLSTR="🔉 $(amixer sget Master | awk -F"[][]" '/%/ { print $2 }')"
+	VOLSTR="🔉 $(amixer sget Master | awk -F"[][]" '/%/ { print $2; exit }')"
 
 	DATESTR="📅 $( date +%a\ %d\ %b\ %R:%S )"
 
