@@ -9,7 +9,7 @@ df -h | grep -q '\/home$' && HASHOME=true
 while true; do
 	[ -z "${BATDIR}" ] || BATSTR="🔋 $( cat "${BATDIR}"/capacity )% $( cat "${BATDIR}"/status ) | "
 
-	VOLSTR="🔉 $(amixer sget Master | awk -F"[][]" '/%/ { print $2; exit }')"
+	VOLSTR="🔉 $(amixer sget Master | awk -F"[][]" '/dB/ { print $2 }')"
 
 	DATESTR="📅 $( date +%a\ %d\ %b\ %R:%S )"
 
@@ -18,7 +18,7 @@ while true; do
 		paste -sd ' ')"
 	[ "$ADDRSTR" = "📶 " ] && ADDRSTR="📶 No Internet"
 
-	FREESTR="💾 $( free -m | awk '/Mem:/ { gsub("Mi","M");gsub("Gi","G"); print $3 " / " $2 }' )"
+	FREESTR="💾 $( free -m | awk '/Mem:/ { print $3 " / " $2 }' )"
 
 	CPUSTR="🌀 $( awk '/cpu / {usage=($2+$4)*100/($2+$4+$5)} END { printf("%.0f", usage) }' /proc/stat )%"
 

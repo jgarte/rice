@@ -94,12 +94,12 @@ static Key keys[] = {
 	{ GLOBALMODKEY,                       XK_minus,                  spawn, SHCMD("amixer -q sset Master 5%-") },
 	{ GLOBALMODKEY,			              XK_KP_Equal,               spawn, SHCMD("amixer -q sset Master 5%+") },
 	/* Brightness */
-	{ 0,                                  XF86XK_MonBrightnessUp,    spawn, SHCMD("xbacklight -inc 1 -time 50") },
-	{ 0,                                  XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -dec 1 -time 50") },
-	{ ShiftMask,                          XF86XK_MonBrightnessUp,    spawn, SHCMD("xbacklight -inc 10 -time 50") },
-	{ ShiftMask,                          XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -dec 10 -time 50") },
-	{ GLOBALMODKEY,                       XF86XK_MonBrightnessUp,    spawn, SHCMD("xbacklight -set 100 -time 50") },
-	{ GLOBALMODKEY,                       XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -set 1 -time 50") },
+	{ 0,                                  XF86XK_MonBrightnessUp,    spawn, SHCMD("bri inc") },
+	{ 0,                                  XF86XK_MonBrightnessDown,  spawn, SHCMD("bri dec") },
+	{ ShiftMask,                          XF86XK_MonBrightnessUp,    spawn, SHCMD("bri inc 10") },
+	{ ShiftMask,                          XF86XK_MonBrightnessDown,  spawn, SHCMD("bri dec 10") },
+	{ GLOBALMODKEY,                       XF86XK_MonBrightnessUp,    spawn, SHCMD("bri set 100") },
+	{ GLOBALMODKEY,                       XF86XK_MonBrightnessDown,  spawn, SHCMD("bri set") },
 	/* Applications */
 	{ GLOBALMODKEY,                       XK_d,                      spawn, {.v = dmenucmd} },
 	{ GLOBALMODKEY,                       XK_Return,                 spawn, {.v = termcmd} },
