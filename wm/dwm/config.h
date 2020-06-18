@@ -98,7 +98,7 @@ static Key keys[] = {
 	{ 0,                                  XF86XK_MonBrightnessDown,  spawn, SHCMD("bri dec") },
 	{ ShiftMask,                          XF86XK_MonBrightnessUp,    spawn, SHCMD("bri inc 10") },
 	{ ShiftMask,                          XF86XK_MonBrightnessDown,  spawn, SHCMD("bri dec 10") },
-	{ GLOBALMODKEY,                       XF86XK_MonBrightnessUp,    spawn, SHCMD("bri set 100") },
+	{ GLOBALMODKEY,                       XF86XK_MonBrightnessUp,    spawn, SHCMD("bri max") },
 	{ GLOBALMODKEY,                       XF86XK_MonBrightnessDown,  spawn, SHCMD("bri set") },
 	/* Applications */
 	{ GLOBALMODKEY,                       XK_d,                      spawn, {.v = dmenucmd} },
