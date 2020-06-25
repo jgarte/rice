@@ -9,15 +9,16 @@ static const int topbar                = 1;        /* 0 means bottom bar */
 static const char barsep               = ';';       /* seperates left and right bar text */
 static const char *fonts[]             = { "Source Code Pro:style=Regular:size=8" };
 static const char dmenufont[]          = "Source Code Pro:style=Regular:size=8";
-static const char col_gray1[]          = "#2e3440";
-static const char col_gray4[]          = "#4c566a";
-static const char col_white2[]         = "#e5e9f0";
-static const char col_white3[]         = "#eceff4";
-static const char *colors[][3]      = {
+static const char col_gray1[]  = "#2E2E2E";
+static const char col_gray2[]  = "#5C5C5C";
+static const char col_pink1[]  = "#E88BE0";
+static const char col_pink2[]  = "#EDBBE9";
+static const char col_white[]  = "#E9E9E9";
+static const char *colors[][3] = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_white2, col_gray1, col_gray1 },
-	[SchemeSel]  = { col_white3, col_gray4, col_gray4  },
-	[SchemeHid]  = { col_gray4, col_white2, col_white2  },
+	[SchemeNorm] = { col_white, col_gray1, col_gray1 },
+	[SchemeSel]  = { col_white, col_gray2, col_gray2 },
+	[SchemeHid]  = { col_gray2, col_white, col_white },
 };
 
 /* uncomment for status on all monitors */
