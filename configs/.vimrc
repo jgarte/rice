@@ -59,7 +59,7 @@ set ts=4 sw=4
 set clipboard=unnamedplus
 
 " colorscheme
-colorscheme nord
+colorscheme vibrant-night
 
 " tabcomplete
 set wildmode=longest,list,full
