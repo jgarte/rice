@@ -10,10 +10,6 @@ If you're on arch I would recommend installing `libxft-bgra` from the aur instea
 
 You will also need the following packages installed in order to use my files
 
-```
-picom tmux
-```
+The used browser is [ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium).
 
-The used browser is chromium, however I wouldn't recommend you using it. Instead I would recommend installing [ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium).
-
-If you want to use everything that I use, look at [other.md](other.md) as well as my application binds in [dwm's config](wm/dwm/config.h)
+If you want to use everything that I use, look at [other.md](other.md) as well as my application binds in [keybinds.md](keybinds.md)

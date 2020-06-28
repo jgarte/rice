@@ -100,7 +100,7 @@ Send window to tag X `Super + Shift + X`
 
 Stick window to tag X `Super + Shift + Control + X`
 
-Toggle tag X `Super + Shift + X`
+Toggle tag X `Super + Control + X`
 
 ## tmux
 

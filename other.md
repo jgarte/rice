@@ -1,17 +1,11 @@
 ## Chromium theme
 
-Use [ungoogled chromium](https://github.com/Eloston/ungoogled-chromium) instead of chromium. Google are evil, and your privacy matters.
-
-The theme I use is [Nord by kevinwochan](https://chrome.google.com/webstore/detail/nord/abehfkkfjlplnjadfcjiflnejblfmmpj?hl=en)
+See [Vibrant night](https://github.com/depsterr/vibrant-night)
 
 ## Chromium homepage
 
 The homepage is my own creation. You can find it on github at [depsterr/homepage](https://github.com/depsterr/homepage) or live on my website at [depsterr.com/homepage](https://depsterr.com/homepage).
 
-## Glasscord
+## Discord (priopietary)
 
-I also use [glasscord](https://github.com/AryToNeX/Glasscord) to rice my discord install. I use [a Glasscord nord theme](https://github.com/trevarj/glasscord-nord).
-
-## Spotify Theme
-
-I use [ my own Nord theme](https://github.com/depsterr/spicetify-nord) for [spicetify](https://github.com/khanhas/spicetify-cli)
+My colorscheme also has a discord colorscheme (with glasscord support if you want to use a compositor)

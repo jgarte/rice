@@ -1,9 +1,8 @@
 # rice
 Linux rice
 
-[![](resources/tmux.jpg?raw=true)](resources/tmux.png?raw=true)
+[![](resources/screen.jpg?raw=true)](resources/screen.png?raw=true)
 
-[![](resources/fibonacci.jpg?raw=true)](resources/fibonacci.png?raw=true)
 
 ## Installer
 
@@ -19,7 +18,7 @@ Checkout [keybinds.md](keybinds.md) for all the keybinds.
 
 ## Colorscheme
 
-[Nord](https://www.nordtheme.com/)
+[Vibrant night](https://github.com/depsterr/vibrant-night)
 
 ## Terminal
 
