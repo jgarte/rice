@@ -1,7 +1,7 @@
 # rice
 Linux rice
 
-[![](resources/screen.jpg?raw=true)](resources/screen.png?raw=true)
+[![](resources/screen.png?raw=true)](resources/screen.png?raw=true)
 
 
 ## Installer
