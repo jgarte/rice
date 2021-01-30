@@ -113,8 +113,8 @@ static Key keys[] = {
 	{ 0,                                  XK_Print,                  spawn, SHCMD("scrot -u ~/img/screenshots/%Y-%m-%d-%T-screenshot.png") },
 	{ GLOBALMODKEY,                                  XK_Print,                  spawn, SHCMD("scrot ~/img/screenshots/%Y-%m-%d-%T-screenshot.png") },
 	{ 0,                                  XK_F4,                     spawn, SHCMD("mpc toggle") },
-	{ 0,                                  XK_F5,                     spawn, SHCMD("mpc next") },
-	{ 0,                                  XK_F6,                     spawn, SHCMD("mpc prev") },
+	{ 0,                                  XK_F5,                     spawn, SHCMD("mpc prev") },
+	{ 0,                                  XK_F6,                     spawn, SHCMD("mpc next") },
 	{ 0,                                  XK_F7,                     spawn, SHCMD("mpc vol -5") },
 	{ 0,                                  XK_F8,                     spawn, SHCMD("mpc vol +5") },
 	/* Tags */
