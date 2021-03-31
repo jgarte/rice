@@ -1,5 +1,6 @@
 #!/bin/sh
 
+xrdb "$HOME/.Xresources"
 export RXVT_SOCKET="/tmp/${USER}_RXVT"
 urxvtd -q -o -f
 
