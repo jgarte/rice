@@ -1,4 +1,8 @@
 #!/bin/sh
+
+export RXVT_SOCKET="/tmp/${USER}_RXVT"
+urxvtd -q -o -f
+
 xwallpaper --zoom "$HOME/img/wp.png" &
 
 for m in HDMI-1 DVI-D-0; do

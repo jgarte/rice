@@ -12,7 +12,7 @@ import XMonad.Actions.CycleWS
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
 
-term = "st -e tmux"
+term = "urxvtc -e tmux"
 browser = "firefox"
 launcher = "dmenu_run"
 

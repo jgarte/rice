@@ -1,0 +1,77 @@
+/*
+ *  URxvt
+ */
+
+URxvt.scrollBar: false
+
+URxvt.background: #2E2E2E
+URxvt.foreground: #E9E9E9
+
+URxvt.color0:  #2E2E2E
+URxvt.color1:  #F7748D
+URxvt.color2:  #76EDA3
+URxvt.color3:  #F7BF65
+URxvt.color4:  #4DA4F0
+URxvt.color5:  #E88BE0
+URxvt.color6:  #1DDBC9
+URxvt.color7:  #E9E9E9
+
+URxvt.color8:  #5C5C5C
+URxvt.color9:  #FF9CAA
+URxvt.color10: #A4EDAC
+URxvt.color11: #F7E2A1
+URxvt.color12: #B7C8FF
+URxvt.color13: #EDBBE9
+URxvt.color14: #81F5E1
+URxvt.color15: #F5F5F5
+
+URxvt.font: xft:Source Code Pro:style=Regular:pixelsize=14:antialias=true
+URxvt.letterSpace: -1
+URxvt.intensityStyles: false
+
+URxvt.boldFont:
+URxvt.italicFont:
+URxvt.boldItalicFont:
+
+URxvt.keysym.M-c: builtin:
+URxvt.keysym.M-v: builtin:
+
+URxvt.perl-ext-common: clipboard,matcher
+
+URxvt.clipboard.autocopy: true
+URxvt.keysym.C-S-c: perl:clipboard:copy
+URxvt.keysym.C-S-v: perl:clipboard:paste
+
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
+
+
+/*
+ *  Xterm
+ */
+
+XTerm.cursorBlink: false
+XTerm*faceName:              xft:Cozette:Style=Medium:antialias=false
+XTerm*allowBoldFonts:        false
+XTerm*toolBar:               false
+XTerm.vt100.alternateScroll: true
+
+XTerm.vt100.color1:          #fefefe
+XTerm.vt100.color8:          #fefefe
+XTerm.vt100.backarrowKey:    false
+XTerm.ttyModes:              erase ^?
+XTerm.vt100.metaSendsEscape: true
+XTerm.vt100.internalBorder:  15
+XTerm*saveLines:             5000
+XTerm*decTerminalID:         vt340
+XTerm*numColorRegisters:     256
+
+XTerm*vt100.translations: #override \
+    Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
+
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+
+XTerm*printerCommand: xterm -T History -e sh -c 'less -r <&3' 3<&0
+XTerm*translations: #override Ctrl <Key>slash: print-everything()
