@@ -33,14 +33,18 @@ URxvt.boldFont:
 URxvt.italicFont:
 URxvt.boldItalicFont:
 
-URxvt.keysym.M-c: builtin:
-URxvt.keysym.M-v: builtin:
+URxvt.keysym.C-M-c: builtin-string:
+URxvt.keysym.C-M-v: builtin-string:
 
-URxvt.perl-ext-common: clipboard,matcher
+URxvt.perl-ext-common: default,selection-to-clipboard,pasta,matcher
 
-URxvt.clipboard.autocopy: true
-URxvt.keysym.C-S-c: perl:clipboard:copy
-URxvt.keysym.C-S-v: perl:clipboard:paste
+! Disable ISO 14755 unicode input so we can use Ctrl-Shift bindings
+URxvt.iso14755:        false
+URxvt.iso14755_52:     false
+
+! Bind Ctrl-Shift-c & Ctrl-Shift-v to copy and paste
+URxvt.keysym.C-S-0x43: perl:pasta:copy
+URxvt.keysym.C-S-0x56: perl:pasta:paste
 
 URxvt.url-launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
